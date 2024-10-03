@@ -4,6 +4,7 @@ from typing import Callable
 import regex
 from colorama import Fore
 
+
 def fibonacci(n):
     if n <= 0:
         return 0
@@ -11,10 +12,8 @@ def fibonacci(n):
         return 1
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)
-
-    s = cache.append(fibonacci(n))
-    print(s)
     return fibonacci(n)
+
 
 # 55
 result1 = fibonacci(10)
