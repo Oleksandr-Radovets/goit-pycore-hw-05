@@ -1,5 +1,3 @@
-
-
 import re
 from typing import Callable
 
@@ -7,21 +5,23 @@ import regex
 from colorama import Fore
 
 
-def caching_fibonacci(n):
-    cache = list()
-
-    def fibonacci(n):
-        if n <= 0:
-            return 0
-        elif n == 1:
-            return 1
-        else:
-            return fibonacci(n - 1) + fibonacci(n - 2)
-
-    s = cache.append(fibonacci(n))
-    print(s)
+def fibonacci(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
     return fibonacci(n)
 
+
+# 55
+result1 = fibonacci(10)
+
+#610
+result2 = fibonacci(15)
+print(result1)
+print(result2)
 
 if __name__ == '__main__':
     t = "Загальний дохід працівника складається з декількох частин: " \
@@ -114,6 +114,7 @@ if __name__ == '__main__':
                 return res
             else:
                 print("Give correct name and phone please.")
+
         return inner
 
 
